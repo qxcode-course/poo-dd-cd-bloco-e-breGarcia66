@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_18-47-38",
+            "content": "@@ -274,15 +274,8 @@\n t(f'\n-O urso \n %7Bsel\n@@ -300,16 +300,17 @@\n vendo...\n+.\n ');%0A  #F\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-04_18-52-01",
+            "content": "@@ -308,40 +308,8 @@\n endo\n- impoderado pela escura floresta\n ...'\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-04_19-08-20",
+            "content": "from Animal import Animal;\n\n# Criando classe Urso\nclass Usro(Animal):\n\n  # Construtor\n  def __init__(self, nome: str):\n    super().__init__(nome);\n  # Fim construtor\n\n  # M\u00e9todos do objeto\n  def fazerSom(self):\n    print('Uuuaaaarrrrrhhhh!!!');\n\n  def mover(self):\n    print(f'O urso {self.nome} est\u00e1 se movendo impoderado pela escura floresta...');\n  #Fim m\u00e9todos do objeto\n# Fim classe Urso",
+            "lines": "18"
+        }
+    ]
+}

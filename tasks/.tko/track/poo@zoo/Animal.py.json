@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_18-35-13",
+            "content": "@@ -119,32 +119,37 @@\n it__(self, n\n-o\n+a\n me: str\n+ = ''\n ):%0A    self.\n@@ -150,17 +150,17 @@\n  self._n\n-o\n+a\n me: str \n@@ -158,25 +158,25 @@\n ame: str = n\n-o\n+a\n me;%0A  # Fim \n@@ -224,25 +224,25 @@\n erty%0A  def n\n-o\n+a\n me(self) -%3E \n@@ -264,17 +264,17 @@\n  self._n\n-o\n+a\n me;%0A  # \n@@ -321,17 +321,17 @@\n tes%0A  @n\n-o\n+a\n me.sette\n@@ -339,17 +339,17 @@\n %0A  def n\n-o\n+a\n me(self,\n@@ -350,17 +350,17 @@\n (self, n\n-o\n+a\n me: str)\n@@ -376,16 +376,16 @@\n f._n\n-o\n+a\n me = n\n-o\n+a\n me;%0A\n@@ -492,17 +492,17 @@\n  %7Bself.n\n-o\n+a\n me%7D');%0A \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-12-04_18-41-12",
+            "content": "@@ -135,21 +135,8 @@\n  str\n- = 'criatura'\n ):%0A \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-12-04_18-47-38",
+            "content": "from abc import ABC, abstractmethod;\n\n# Criando classe abstrada Animal\nclass Animal(ABC):\n  \n  # Construtor\n  def __init__(self, nome: str = 'criatura'):\n    self._nome: str = nome;\n  # Fim construtor\n\n  # M\u00e9todos de acesso\n  @property\n  def nome(self) -> str:\n    return self._nome;\n  # Fim m\u00e9todos de acesso\n\n  # M\u00e9todos mutantes\n  @nome.setter\n  def nome(self, nome: str):\n    self._nome = nome;\n  # Fim m\u00e9todos mutantes\n\n  # M\u00e9todos concretos\n  def apresentarNome(self):\n    print(f'eu sou um(a) {self.nome}');\n  # Fim m\u00e9todos concretos\n\n  # M\u00e9todos abstratos\n  @abstractmethod\n  def fazerSom(self):\n    pass\n\n  @abstractmethod\n  def mover(self):\n    pass\n  # Fim m\u00e9todos abstratos\n# Fim classe abstrata Animal\n  ",
+            "lines": "38"
+        }
+    ]
+}

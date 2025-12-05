@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_18-52-01",
+            "content": "@@ -308,35 +308,8 @@\n endo\n- pulando pelo %C3%BAmido pantano\n ...'\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-04_19-08-20",
+            "content": "from Animal import Animal;\n\n# Criando classe Sapo\nclass Sapo(Animal):\n\n  # Construtor\n  def __init__(self, nome: str):\n    super().__init__(nome)\n  # Fim construtor\n\n  # M\u00e9todos do objeto\n  def fazerSom(self):\n    print('croac-corac... croac');\n\n  def mover(self):\n    print(f'O sapo {self.nome} est\u00e1 se movendo pulando pelo \u00famido pantano...')\n  # Fim m\u00e9todos do objeto\n# Fim classe Sapo",
+            "lines": "18"
+        }
+    ]
+}

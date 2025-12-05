@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_18-06-04",
+            "content": "@@ -0,0 +1,618 @@\n+from abc import ABC, abstractmethod;%0A%0A# Criando classe abstrada Animal%0Aclass Animal(ABC):%0A  %0A  # Construtor%0A  def __init__(self, name: str = ''):%0A    self._name: str = name;%0A  # Fim construtor%0A%0A  # M%C3%A9todos de acesso%0A  @property%0A  def name(self) -%3E str:%0A    return self._name;%0A  # Fim m%C3%A9todos de acesso%0A%0A  # M%C3%A9todos mutantes%0A  @name.setter%0A  def name(self, name: str):%0A    self._name = name;%0A  # Fim m%C3%A9todos mutantes%0A%0A  # M%C3%A9todos concretos%0A  def apresentarNome(self):%0A    print(f'eu sou um(a) %7Bself.name%7D');%0A  # Fim m%C3%A9todos concretos%0A%0A  # M%C3%A9todos abstratos%0A  @%0A%0A  # Fim m%C3%A9todos abstratos%0A# Fim classe abstrata Animal%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-12-04_18-35-13",
+            "content": "@@ -1,538 +0,0 @@\n-import Animal;%0Aimport Cachorro;%0Aimport Urso;%0Aimport Sapo;%0A%0A# Instanciando classes%0Acachorro: Cachorro = Cachorro('Carlitos');%0Aurso: Urso = Urso('Kenai');%0Asapo: Sapo = Sapo('Alfredo');%0A%0A# Apresentando animais diversos%0Adef apresentarAnimal(animal: Animal):%0A  print(f'''%0A  =====%5B%7Btype(animal).__name___%7D%5D=====%0A  - %7Banimal.apresentarNome()%7D%0A  - %7Banimal.fazerSom()%7D%0A  %7Banimal.mover()%7D%0A        ''');%0A%0A# Execu%C3%A7%C3%A3o de c%C3%B3digo%0AlistaAnimais: list%5BAnimal%5D = %5Bcachorro, urso, sapo%5D;%0Afor animal in listaAnimais:%0A  apresentarAnimal(animal);%0A# Fim execu%C3%A7%C3%A3o\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-04_19-08-20",
+            "content": "@@ -1,16 +1,4 @@\n-from Animal \n impo\n@@ -12,22 +12,8 @@\n al;%0A\n-from Cachorro \n impo\n@@ -29,18 +29,8 @@\n ro;%0A\n-from Urso \n impo\n@@ -42,18 +42,8 @@\n so;%0A\n-from Sapo \n impo\n@@ -257,16 +257,21 @@\n print(f'\n+''%0A  \n =====%5B%7Bt\n@@ -294,21 +294,22 @@\n me__\n+_\n %7D%5D=====\n-');\n %0A  \n+- %7B\n anim\n@@ -327,20 +327,23 @@\n arNome()\n-;\n+%7D\n %0A  \n+- %7B\n animal.f\n@@ -355,12 +355,13 @@\n om()\n-;\n+%7D\n %0A  \n+%7B\n anim\n@@ -370,16 +370,30 @@\n .mover()\n+%7D%0A        ''')\n ;%0A%0A# Exe\n@@ -420,16 +420,30 @@\n aAnimais\n+: list%5BAnimal%5D\n  = %5Bcach\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-12-04_19-14-56",
+            "content": "from Animal import Animal;\nfrom Cachorro import Cachorro;\nfrom Urso import Urso;\nfrom Sapo import Sapo;\n\n# Instanciando classes\ncachorro: Cachorro = Cachorro('Carlitos');\nurso: Urso = Urso('Kenai');\nsapo: Sapo = Sapo('Alfredo');\n\n# Apresentando animais diversos\ndef apresentarAnimal(animal: Animal):\n  print(f'=====[{type(animal).__name__}]=====');\n  animal.apresentarNome();\n  animal.fazerSom();\n  animal.mover();\n\n# Execu\u00e7\u00e3o de c\u00f3digo\nlistaAnimais = [cachorro, urso, sapo];\nfor animal in listaAnimais:\n  apresentarAnimal(animal);\n# Fim execu\u00e7\u00e3o",
+            "lines": "22"
+        }
+    ]
+}

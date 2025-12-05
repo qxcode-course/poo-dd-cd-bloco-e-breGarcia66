@@ -1,14 +1,24 @@
-from abc import ABC, abstractmethod;
+from Animal import Animal;
+from Cachorro import Cachorro;
+from Urso import Urso;
+from Sapo import Sapo;
 
-class Animal(ABC):
-  @abstractmethod
-  def apresentar_nome(self) -> None:
-    pass;
+# Instanciando classes
+cachorro: Cachorro = Cachorro('Carlitos');
+urso: Urso = Urso('Kenai');
+sapo: Sapo = Sapo('Alfredo');
 
-  @abstractmethod
-  def fazer_som(self) -> None:
-    pass;
+# Apresentando animais diversos
+def apresentarAnimal(animal: Animal):
+  print(f'=====[{type(animal).__name__}]=====');
+  animal.apresentarNome();
+  animal.fazerSom();
+  animal.mover();
+  print(f'=====[{type(animal).__name__}]=====\n');
 
-  @abstractmethod
-  def mover(self) -> None:
-    pass;
+
+# Execução de código
+listaAnimais = [cachorro, urso, sapo];
+for animal in listaAnimais:
+  apresentarAnimal(animal);
+# Fim execução

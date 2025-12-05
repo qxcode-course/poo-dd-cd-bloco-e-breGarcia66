@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-04_18-41-12",
+            "content": "@@ -183,168 +183,8 @@\n or%0A%0A\n-  # M%C3%A9todos do objeto%0A  def fazerSom(self):%0A    print('Au au!!!');%0A%0A  def mover(self):%0A    print(f'%7Bself.nome%7D est%C3%A1 se movendo....');%0A  # Fim m%C3%A9todos do objeto%0A\n #Fim\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-04_18-43-37",
+            "content": "@@ -404,42 +404,4 @@\n me);\n-%0A%0Ac.nome = 'Carlitos';%0A%0Aprint(c.nome);\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-04_18-44-05",
+            "content": "@@ -116,16 +116,29 @@\n ome: str\n+ = 'criatura'\n ):%0A    s\n@@ -343,24 +343,103 @@\n eto%0A#Fim classe Cachorro\n+%0A%0Ac = Cachorro('Boingo');%0A%0Aprint(c.nome);%0A%0Ac.nome = 'Carlitos';%0A%0Aprint(c.nome);\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-12-04_18-47-38",
+            "content": "@@ -269,19 +269,8 @@\n t(f'\n-O cachorro \n %7Bsel\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-04_18-52-01",
+            "content": "@@ -307,20 +307,8 @@\n endo\n- pelo parque\n ....\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-04_19-08-20",
+            "content": "from Animal import Animal;\n\n# Criando classe Cachorro\nclass Cachorro(Animal):\n\n  # Contrutor\n  def __init__(self, nome: str):\n    super().__init__(nome);\n  #Fim construtor\n\n  # M\u00e9todos do objeto\n  def fazerSom(self):\n    print('Au au!!!');\n\n  def mover(self):\n    print(f'O cachorro {self.nome} est\u00e1 se movendo pelo parque....');\n  # Fim m\u00e9todos do objeto\n#Fim classe Cachorro",
+            "lines": "18"
+        }
+    ]
+}
