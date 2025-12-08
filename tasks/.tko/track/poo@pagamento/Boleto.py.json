@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_15-18-22",
+            "content": "@@ -106,17 +106,16 @@\n ef __ini\n-t\n __(self,\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-12-08_15-19-28",
+            "content": "from Pagamento import Pagamento;\n\n# Criando subclasse Boleto\nclass Boleto(Pagamento):\n\n  # Construtor\n  def __init__(self,\n              valor: float,\n              descricao: str,\n              codigoDeBarra: str,\n              dataVencimento: str):\n    super().__init__(valor, descricao);\n    self.__codigoDeBarra: str = codigoDeBarra;\n    self.__dataVencimento: str = dataVencimento;\n  # Fim constutor\n\n  # M\u00e9todos de acesso\n  @property\n  def codigoDeBarra(self) -> str:\n    return self.__codigoDeBarra;\n\n  @property\n  def dataVencimento(self) -> str:\n    return self.__dataVencimento;\n  # Fim m\u00e9todos de acesso \n\n  # M\u00e9todos do objeto\n  def processar(self):\n    print('Boleto gerado. Aguardando pagamento...');\n  # Fim m\u00e9todos do objeto\n# Fim subclasse Boleto",
+            "lines": "31"
+        }
+    ]
+}

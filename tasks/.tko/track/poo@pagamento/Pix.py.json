@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_14-39-06",
+            "content": "@@ -1,842 +0,0 @@\n-from Pagamento import Pagamento;%0A%0A# Criando subclasse Pix%0Aclass Pix(Pagamento):%0A%0A  # Construtor%0A  def __init__(self,%0A               valor: float,%0A               descricao: str,%0A               chave: str,%0A               banco: str):%0A    super().__init__(valor, descricao);%0A    self.__chave: str = chave;%0A    self.__banco: str = banco; %0A  # Fim Construtor%0A%0A  # M%C3%A9todos de acesso%0A  @property%0A  def chave(self) -%3E str:%0A    return self.__chave;%0A%0A  @property%0A  def banco(self) -%3E str:%0A    return self.__banco;%0A  # Fim m%C3%A9todos de acesso%0A%0A  # M%C3%A9todos do objeto%0A  def processar(self):%0A    if self.validarValor() is False:%0A      print('Erro: valor invalido');%0A      return;%0A%0A    self.valor = 0;%0A    self.descricao = '';%0A    %0A    print(f'PIX enviado via %7Bself.banco%7D usando chave %7Bself.chave%7D');%0A    return;%0A  # Fim m%C3%A9todos do objeto%0A# Fim subclasse Pix\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-08_15-04-39",
+            "content": "@@ -569,16 +569,105 @@\n (self):%0A\n+    if self.validarValor() is False:%0A      print('Erro: valor invalido');%0A      return;%0A%0A\n     self\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-12-08_15-18-22",
+            "content": "from Pagamento import Pagamento;\n\n# Criando subclasse Pix\nclass Pix(Pagamento):\n\n  # Construtor\n  def __init__(self,\n               valor: float,\n               descricao: str,\n               chave: str,\n               banco: str):\n    super().__init__(valor, descricao);\n    self.__chave: str = chave;\n    self.__banco: str = banco; \n  # Fim Construtor\n\n  # M\u00e9todos de acesso\n  @property\n  def chave(self) -> str:\n    return self.__chave;\n\n  @property\n  def banco(self) -> str:\n    return self.__banco;\n  # Fim m\u00e9todos de acesso\n\n  # M\u00e9todos do objeto\n  def processar(self):\n    self.valor = 0;\n    self.descricao = '';\n    \n    print(f'PIX enviado via {self.banco} usando chave {self.chave}');\n    return;\n  # Fim m\u00e9todos do objeto\n# Fim subclasse Pix",
+            "lines": "35"
+        }
+    ]
+}

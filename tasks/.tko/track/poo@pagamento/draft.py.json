@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-05_11-23-22",
+            "content": "@@ -1,495 +0,0 @@\n-from CartaoCredito import CartaoCredito;%0A%0Acc = CartaoCredito(150.00, 'mouse Attack Shark', '555 555 555', 'Josnei', 525.50);%0A%0Aprint(f'''%0Avalor a pagar: %7Bcc.valor%7D%0Adescri%C3%A7%C3%A3o: %7Bcc.descricao%7D%0An%C3%BAmero do cart%C3%A3o: %7Bcc.numero%7D%0Anome do titular: %7Bcc.nomeTitular%7D%0Alimite de cr%C3%A9dito: %7Bcc.limiteDisponivel%7D%0A%5Cn%0A''');%0A%0Acc.processar();%0A%0Aprint(f'''%0Avalor a pagar: %7Bcc.valor%7D%0Adescri%C3%A7%C3%A3o: %7Bcc.descricao%7D%0An%C3%BAmero do cart%C3%A3o: %7Bcc.numero%7D%0Anome do titular: %7Bcc.nomeTitular%7D%0Alimite de cr%C3%A9dito: %7Bcc.limiteDisponivel%7D%0A''');%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-08_14-30-04",
+            "content": "@@ -146,38 +146,34 @@\n pagar: %7Bcc.valor\n-:.2f\n %7D%0A\n+\n descri%C3%A7%C3%A3o: %7Bcc.d\n@@ -285,20 +285,16 @@\n sponivel\n-:.2f\n %7D%0A%5Cn%0A'''\n@@ -349,20 +349,16 @@\n cc.valor\n-:.2f\n %7D%0Adescri\n@@ -433,32 +433,32 @@\n cc.nomeTitular%7D%0A\n+\n limite de cr%C3%A9dit\n@@ -484,12 +484,8 @@\n ivel\n-:.2f\n %7D%0A''\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-08_14-33-56",
+            "content": "@@ -38,105 +38,89 @@\n to;%0A\n-from Pix import Pix;%0A%0Apiuks = Pix(21.00, 'Limpa telas 300ml', 'Banco do Brasil', '64546816196548'\n+%0Acc = CartaoCredito(150.00, 'mouse Attack Shark', '555 555 555', 'Josnei', 525.50\n );%0A%0A\n@@ -138,37 +138,34 @@\n valor a pagar: %7B\n-piuks\n+cc\n .valor:.2f%7D%0Adesc\n@@ -162,35 +162,32 @@\n :.2f%7D%0Adescri\n-ca\n+%C3%A7%C3%A3\n o: %7B\n-piuks\n+cc\n .descricao%7D%0A\n@@ -190,48 +190,115 @@\n ao%7D%0A\n-banco: %7Bpiuks.banco%7D%0Achave: %7Bpiuks.chave\n+n%C3%BAmero do cart%C3%A3o: %7Bcc.numero%7D%0Anome do titular: %7Bcc.nomeTitular%7D%0Alimite de cr%C3%A9dito: %7Bcc.limiteDisponivel:.2f\n %7D%0A%5Cn\n@@ -306,31 +306,13 @@\n ''')\n+;\n %0A%0A\n-piuks.resumo();%0Apiuks\n+cc\n .pro\n@@ -349,21 +349,18 @@\n pagar: %7B\n-piuks\n+cc\n .valor:.\n@@ -373,19 +373,16 @@\n scri\n-ca\n+%C3%A7%C3%A3\n o: %7B\n-piuks\n+cc\n .des\n@@ -393,52 +393,116 @@\n ao%7D%0A\n-banco: %7Bpiuks.banco%7D%0Achave: %7Bpiuks.chave%7D%0A%5Cn\n+n%C3%BAmero do cart%C3%A3o: %7Bcc.numero%7D%0Anome do titular: %7Bcc.nomeTitular%7D%0Alimite de cr%C3%A9dito: %7Bcc.limiteDisponivel:.2f%7D\n %0A'''\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-08_15-04-39",
+            "content": "@@ -59,106 +59,83 @@\n ix;%0A\n-from Boleto import Boleto;%0A%0Ab = Boleto(2500, 'Notebook ASUS Vivobook', '123456789000', '2025-01-10\n+%0Apiuks = Pix(21.00, 'Limpa telas 300ml', 'Banco do Brasil', '64546816196548\n ');%0A\n@@ -147,34 +147,50 @@\n t(f'''%0Avalor\n-: %7Bb\n+ a pagar: %7Bpiuks\n .valor\n+:.2f\n %7D%0Adescricao:\n@@ -183,33 +183,37 @@\n 2f%7D%0Adescricao: %7B\n-b\n+piuks\n .descricao%7D%0Acodi\n@@ -212,86 +212,64 @@\n ao%7D%0A\n-codigo de barra: %7Bb.descricao%7D%0Adata de vencimento: %7Bb.dataVencimento%7D\n+banco: %7Bpiuks.banco%7D%0Achave: %7Bpiuks.chave%7D%0A%5Cn\n %0A''')\n-;\n %0A%0A\n-b\n+piuks\n .res\n@@ -275,17 +275,21 @@\n sumo();%0A\n-b\n+piuks\n .process\n@@ -315,18 +315,34 @@\n alor\n-: %7Bb\n+ a pagar: %7Bpiuks\n .valor\n+:.2f\n %7D%0Ade\n@@ -351,17 +351,21 @@\n ricao: %7B\n-b\n+piuks\n .descric\n@@ -372,77 +372,52 @@\n ao%7D%0A\n-codigo de barra: %7Bb.descricao%7D%0Adata de vencimento: %7Bb.dataVencimento%7D\n+banco: %7Bpiuks.banco%7D%0Achave: %7Bpiuks.chave%7D%0A%5Cn\n %0A'''\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-12-08_15-18-22",
+            "content": "@@ -86,727 +86,367 @@\n to;%0A\n-from Pagamento import Pagamento;%0A%0A# Lista de inst%C3%A2ncias de pagamentos%0Apagamentos = %5B%0A    Pix(150, 'Camisa esportiva', 'email@ex.com', 'Banco XPTO'),%0A    CartaoCredito(4\n+%0Ab = Boleto(25\n 00, '\n-T%C3%AAnis esportivo', '1234 5678 9123 4567', 'Cliente X', 500),%0A    Boleto(89.90, 'Livro de Python', '123456789000', '2025-01-10'),%0A    CartaoCredito(800, 'Notebook', '9999 8888 7777 6666', 'Cliente Y', 700),  # deve falhar%0A%5D;%0A%0A# M%C3%A9todo processarPagamento%0Adef processarPagamento(pagamento: Pagamento):%0A  if pagamento.validarValor() is False:%0A    print('Erro: pagamento invalido');%0A    return;%0A%0A  pagamento.resumo();%0A  pagamento.processar();%0A%0A  return;%0A%0A# Processando inst%C3%A2ncias de pagamentos%0Afor pagamento in pagamentos:%0A  processarPagamento(pagamento\n+Notebook ASUS Vivobook', '123456789000', '2025-01-10');%0A%0Aprint(f'''%0Avalor: %7Bb.valor%7D%0Adescricao: %7Bb.descricao%7D%0Acodigo de barra: %7Bb.descricao%7D%0Adata de vencimento: %7Bb.dataVencimento%7D%0A''');%0A%0Ab.resumo();%0Ab.processar();%0A%0Aprint(f'''%0Avalor: %7Bb.valor%7D%0Adescricao: %7Bb.descricao%7D%0Acodigo de barra: %7Bb.descricao%7D%0Adata de vencimento: %7Bb.dataVencimento%7D%0A'''\n );%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-12-08_15-28-47",
+            "content": "from CartaoCredito import CartaoCredito;\nfrom Pix import Pix;\nfrom Boleto import Boleto;\nfrom Pagamento import Pagamento;\n\n# Lista de inst\u00e2ncias de pagamentos\npagamentos = [\n    Pix(150, 'Camisa esportiva', 'email@ex.com', 'Banco XPTO'),\n    CartaoCredito(400, 'T\u00eanis esportivo', '1234 5678 9123 4567', 'Cliente X', 500),\n    Boleto(89.90, 'Livro de Python', '123456789000', '2025-01-10'),\n    CartaoCredito(800, 'Notebook', '9999 8888 7777 6666', 'Cliente Y', 700),  # deve falhar\n];\n\n# M\u00e9todo processarPagamento\ndef processarPagamento(pagamento: Pagamento):\n  if pagamento.validarValor() is False:\n    print('Erro: pagamento invalido');\n    return;\n\n  pagamento.resumo();\n  pagamento.processar();\n\n  return;\n\n# Processando inst\u00e2ncias de pagamentos\nfor pagamento in pagamentos:\n  processarPagamento(pagamento);\n",
+            "lines": "27"
+        }
+    ]
+}

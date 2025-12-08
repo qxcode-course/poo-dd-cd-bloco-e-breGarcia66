@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_13-53-55",
+            "content": "@@ -544,95 +544,27 @@\n     \n-if self.validarValor():%0A      self._valor = valor;%0A  %0A    print('fail: valor invalido')\n+self._valor = valor\n ;%0A%0A \n@@ -706,186 +706,10 @@\n tos%0A\n+\n   \n-def resumo(self):%0A    print(f'Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D');%0A%0A  def validarValor(self) -%3E bool:%0A    if self.valor %3C= 0:%0A      return False;%0A%0A    return True;\n %0A  #\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-08_13-57-31",
+            "content": "@@ -1002,58 +1002,8 @@\n tos%0A\n-  @abstractmethod%0A  def processar(self):%0A    pass;\n %0A  #\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-12-08_14-08-35",
+            "content": "@@ -544,31 +544,97 @@\n     \n-self._valor = valor;%0A  \n+if self.validarValor():%0A      self._valor = valor;%0A  %0A    print('fail: valor invalido');%0A\n %0A  @\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-12-08_14-32-25",
+            "content": "@@ -767,12 +767,8 @@\n alor\n-:.2f\n %7D: %7B\n",
+            "lines": "50"
+        },
+        {
+            "label": "2025-12-08_15-05-02",
+            "content": "from abc import ABC, abstractmethod;\n\n# Criando superclasse abstrata Pagamento\nclass Pagamento(ABC):\n\n  # Construtor\n  def __init__(self,\n               valor: float,\n               descricao: str):\n    self._valor: float = valor;\n    self._descricao: str = descricao;\n  # Fim construtor\n\n  # M\u00e9todos de acesso\n  @property\n  def valor(self) -> float:\n    return self._valor;\n\n  @property\n  def descricao(self) -> str:\n    return self._descricao;\n  # Fim m\u00e9todos de acesso\n\n  # M\u00e9todos mutantes\n  @valor.setter\n  def valor(self, valor: float):\n    self._valor = valor;\n  \n  @descricao.setter\n  def descricao(self, descricao: str):\n    self._descricao = descricao;\n  # Fim m\u00e9todos mutantes\n\n  # M\u00e9todos concretos\n  def resumo(self):\n    print(f'Pagamento de R$ {self.valor:.2f}: {self.descricao}');\n\n  def validarValor(self) -> bool:\n    if self.valor <= 0:\n      return False;\n\n    return True;\n  # Fim m\u00e9todos concretos\n\n  # M\u00e9todos abstratos\n  @abstractmethod\n  def processar(self):\n    pass;\n  # Fim m\u00e9todos abstratos\n# Fim superclasse abstrata Pagamento",
+            "lines": "50"
+        }
+    ]
+}
