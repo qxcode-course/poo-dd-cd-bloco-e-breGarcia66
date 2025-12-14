@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_23-17-27",
+            "content": "@@ -1,248 +1,34 @@\n-from Veiculo import Veiculo;%0A%0A# Criando subclasse Bike%0Aclass Bike(Veiculo):%0A%0A  # Construtor%0A  def __init__(self, id):%0A    super().__init__(id, 'bike', 0);%0A  # Fim construtor%0A%0A  # M%C3%A9todos do objeto%0A  def calcularValor(self, horaSaida: int):%0A    \n+@@ -241,181 +241,51 @@%0A     %0A-\n prin\n@@ -43,17 +43,19 @@\n  chegou \n-%7B\n+%257B\n self.hor\n@@ -66,16 +66,20 @@\n rada\n-%7D\n+%257D\n  saiu \n-%7B\n+%257B\n hora\n@@ -87,9 +87,11 @@\n aida\n-%7D\n+%257D\n . Pa\n@@ -104,17 +104,19 @@\n  3.00');\n-%0A\n+%250A\n   # Fim \n@@ -120,9 +120,14 @@\n im m\n-%C3%A9\n+%25C3%25A9\n todo\n@@ -137,17 +137,19 @@\n o objeto\n-%0A\n+%250A\n # Fim su\n@@ -164,10 +164,14 @@\n Bike\n-%0A%0A\n+%250A%250A\n b = \n@@ -185,17 +185,19 @@\n osnei');\n-%0A\n+%250A\n print(b.\n@@ -223,8 +223,67 @@\n ntrada);\n+%0A+%250A  # Fim m%25C3%25A9todos do objeto%250A# Fim subclasse Bike%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-09_14-15-24",
+            "content": "@@ -345,20 +345,77 @@\n # Fim subclasse Bike\n+%0A%0Ab = Bike('josnei');%0Aprint(b.id, b.tipo, b.horaEntrada);\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-09_14-26-46",
+            "content": "from Veiculo import Veiculo;\n\n# Criando subclasse Bike\nclass Bike(Veiculo):\n\n  # Construtor\n  def __init__(self, id):\n    super().__init__(id, 'bike', 0);\n  # Fim construtor\n\n  # M\u00e9todos do objeto\n  def calcularValor(self, horaSaida: int):\n    print(f'Bike chegou {self.horaEntrada} saiu {horaSaida}. Pagar R$ 3.00');\n  # Fim m\u00e9todos do objeto\n# Fim subclasse Bike",
+            "lines": "15"
+        }
+    ]
+}

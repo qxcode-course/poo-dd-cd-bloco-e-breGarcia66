@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-09_14-26-46",
+            "content": "@@ -399,24 +399,67 @@\n to%0A# Fim subclasse Moto%0A\n+%0Am = Moto('Pedro');%0A%0Am.calcularValor(100);%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-09_14-44-07",
+            "content": "@@ -367,12 +367,8 @@\n alor\n-:.2f\n %7D');\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-12-10_13-54-21",
+            "content": "from Veiculo import Veiculo;\n\n# Criando subclasse Moto\nclass Moto(Veiculo):\n\n  # Construtor\n  def __init__(self, id: str):\n    super().__init__(id, 'moto', 0);\n  # Fim construtor\n\n  # M\u00e9todos do objeto\n  def calcularValor(self, horaSaida: int):\n    valor = (horaSaida - self.horaEntrada) / 20;\n    print(f'Moto chegou {self.horaEntrada} saiu {horaSaida}. Pagar R$ {valor:.2f}');\n  # Fim m\u00e9todos de objeto\n# Fim subclasse Moto\n",
+            "lines": "16"
+        }
+    ]
+}

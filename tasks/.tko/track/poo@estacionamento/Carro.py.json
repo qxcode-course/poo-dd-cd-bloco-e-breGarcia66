@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-09_14-44-07",
+            "content": "@@ -486,24 +486,33 @@\n ro('\n-Josnei');%0A%0Aprint(c\n+Ana');%0A%0Ac.calcularValor(100\n );\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-12-09_14-47-05",
+            "content": "@@ -454,24 +454,56 @@\n o%0A# Fim subclasse Carro%0A\n+%0Ac = Carro('Josnei');%0A%0Aprint(c);\n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-12-09_14-58-02",
+            "content": "@@ -148,12 +148,11 @@\n d, '\n-carr\n+mot\n o', \n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-12-10_13-53-11",
+            "content": "@@ -422,12 +422,8 @@\n inal\n-:.2f\n %7D');\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-12-10_13-54-21",
+            "content": "from Veiculo import Veiculo;\n\n# Criando subclasse Carro\nclass Carro(Veiculo):\n\n  # Construtor\n  def __init__(self, id: str):\n    super().__init__(id, 'carro', 0);\n  # Fim construtor\n\n  # M\u00e9todos do objeto\n  def calcularValor(self, horaSaida: int):\n    valor = (horaSaida - self.horaEntrada) / 10 ;\n    valorFinal = valor if valor >= 5 else 5;\n    print(f'Carro chegou {self.horaEntrada} saiu {horaSaida}. Pagar R$ {valorFinal:.2f}');\n  # Fim m\u00e9todos do objeto\n# Fim subclasse Carro\n",
+            "lines": "17"
+        }
+    ]
+}

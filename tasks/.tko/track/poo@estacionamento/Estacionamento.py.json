@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-09_14-47-05",
+            "content": "@@ -26,27 +26,8 @@\n lo;%0A\n-from Carro import%0A%0A\n %0A# C\n@@ -81,638 +81,10 @@\n to:%0A\n-%0A  # Construtor%0A  def __init__(self):%0A    self.__veiculos: list%5BVeiculo%5D = %5B%5D;%0A    self.__horaAtual: int = 0;%0A  # Fim construtor%0A%0A  # M%C3%A9todos str%0A  def __str__(self) -%3E str:%0A    formattedText: str = '';%0A    for veiculo in self.veiculos:%0A      if self.veiculos.index(veiculo) == len(self.veiculos) - 1:%0A        formattedText += str(veiculo);%0A%0A      formattedText += f'%7Bveiculo%7D%5Cn';%0A    %0A    return formattedText;%0A  # Fim m%C3%A9todo str%0A%0A  # M%C3%A9todos de acesso%0A  @property%0A  def veiculos(self) -%3E list%5BVeiculo%5D:%0A    return self.__veiculos;%0A%0A  @property%0A  def horaAtual(self) -%3E int:%0A    return self.__horaAtual;%0A  # Fim m%C3%A9todos de acesso\n+  \n %0A# F\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-12-09_14-58-02",
+            "content": "@@ -43,61 +43,9 @@\n port\n- Carro;%0Afrom Bike import Bike;%0Afrom Moto import Moto;\n+%0A\n %0A%0A# \n@@ -176,51 +176,8 @@\n  = %5B\n-Bike('Joao'), Moto('Maria'), Carro('Julia')\n %5D;%0A \n@@ -759,37 +759,4 @@\n ento\n-%0A%0Ae = Estacionamento();%0Aprint(e);\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-12-09_15-53-00",
+            "content": "@@ -224,16 +224,59 @@\n ulo%5D = %5B\n+Bike('Joao'), Moto('Maria'), Carro('Julia')\n %5D;%0A    s\n@@ -487,16 +487,20 @@\n eiculos)\n+ - 1\n :%0A      \n@@ -581,67 +581,8 @@\n    %0A\n-    formattedText += f'Hora atual: %7Bself.horaAtual%7D';%0A    %0A\n     \n@@ -826,536 +826,65 @@\n sso%0A\n-%0A  # M%C3%A9todos do objeto%0A  def procurarVeiculo(self, id: str) -%3E int:%0A    for veiculo in self.veiculos:%0A      if (veiculo.id == id):%0A        return self.viculos.index(veiculo);%0A%0A    return -1;%0A%0A  def estacionar(self, veiculo: Veiculo):%0A    veiculo.horaEntrada = self.horaAtual;%0A    self.veiculos.append(veiculo);%0A  # Fim m%C3%A9todos do objeto%0A# Fim classe Estancionamento%0A%0Ae = Estacionamento();%0Aprint(e);%0A%0Ae.estacionar(Carro('Julia'));%0Ae.estacionar(Moto('Maria'));%0Ae.estacionar(Bike('Joao'));%0A%0Aprint(e);%0Aprint(e.procurarVeiculo('Maria')\n+# Fim classe Estancionamento%0A%0Ae = Estacionamento();%0Aprint(e\n );\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-12-09_16-08-08",
+            "content": "@@ -982,25 +982,24 @@\n eturn self.v\n-e\n iculos.index\n@@ -1222,16 +1222,26 @@\n mento();\n+%0Aprint(e);\n %0A%0Ae.esta\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-12-09_16-10-40",
+            "content": "@@ -863,17 +863,16 @@\n o%0A  def \n-_\n procurar\n@@ -1150,405 +1150,215 @@\n o);%0A\n-%0A  def passarTempo(self, tempo: int):%0A    if tempo %3C= 0:%0A      raise Exception('Erro: valor invalido para tempo');%0A  %0A    self.horaAtual += tempo;%0A  # Fim m%C3%A9todos do objeto%0A# Fim classe Estancionamento%0A%0Ae = Estacionamento();%0A%0Ae.estacionar(Carro('Julia'));%0Ae.passarTempo(20);%0Aprint(e);%0A%0Ae.estacionar(Moto('Maria'));%0Ae.passarTempo(30);%0Aprint(e);%0A%0Ae.estacionar(Bike('Joao'));%0Ae.passarTempo(50);%0Aprint(e\n+  # Fim m%C3%A9todos do objeto%0A# Fim classe Estancionamento%0A%0Ae = Estacionamento();%0A%0Ae.estacionar(Carro('Julia'));%0Ae.estacionar(Moto('Maria'));%0Ae.estacionar(Bike('Joao'));%0A%0Aprint(e);%0Aprint(e.procurarVeiculo('Maria')\n );\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-12-09_16-23-57",
+            "content": "@@ -1266,34 +1266,32 @@\n ');%0A  %0A    self.\n-__\n horaAtual += tem\n@@ -1298,242 +1298,258 @@\n po;%0A\n-%0A\n   \n-def pagar(self, id: str):%0A    self.veiculos%5Bself._procurarVeiculo(id)%5D.calcularValor(self.horaAtual);%0A%0A  def sair(self, id: str):%0A    self.veiculos.pop(self._procurarVeiculo(id));%0A  # Fim m%C3%A9todos do objeto%0A# Fim classe E\n+# Fim m%C3%A9todos do objeto%0A# Fim classe Estancionamento%0A%0Ae = Estacionamento();%0A%0Ae.estacionar(Carro('Julia'));%0Ae.passarTempo(20);%0Aprint(e);%0A%0Ae.estacionar(Moto('Maria'));%0Ae.passarTempo(30);%0Aprint(e);%0A%0Ae.e\n sta\n-n\n ciona\n-mento%0A\n+r(Bike('Joao'));%0Ae.passarTempo(50);%0Aprint(e);\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-12-09_16-45-12",
+            "content": "from Veiculo import Veiculo;\nfrom Carro import Carro;\nfrom Bike import Bike;\nfrom Moto import Moto;\n\n# Criando classe Estacionamento\nclass Estacionamento:\n\n  # Construtor\n  def __init__(self):\n    self.__veiculos: list[Veiculo] = [];\n    self.__horaAtual: int = 0;\n  # Fim construtor\n\n  # M\u00e9todos str\n  def __str__(self) -> str:\n    formattedText: str = '';\n    for veiculo in self.veiculos:\n      if self.veiculos.index(veiculo) == len(self.veiculos):\n        formattedText += str(veiculo);\n\n      formattedText += f'{veiculo}\\n';\n    \n    formattedText += f'Hora atual: {self.horaAtual}';\n    \n    return formattedText;\n  # Fim m\u00e9todo str\n\n  # M\u00e9todos de acesso\n  @property\n  def veiculos(self) -> list[Veiculo]:\n    return self.__veiculos;\n\n  @property\n  def horaAtual(self) -> int:\n    return self.__horaAtual;\n  # Fim m\u00e9todos de acesso\n\n  # M\u00e9todos do objeto\n  def _procurarVeiculo(self, id: str) -> int:\n    for veiculo in self.veiculos:\n      if (veiculo.id == id):\n        return self.veiculos.index(veiculo);\n\n    return -1;\n\n  def estacionar(self, veiculo: Veiculo):\n    veiculo.horaEntrada = self.horaAtual;\n    self.veiculos.append(veiculo);\n\n  def passarTempo(self, tempo: int):\n    if tempo <= 0:\n      raise Exception('Erro: valor invalido para tempo');\n  \n    self.__horaAtual += tempo;\n\n  def pagar(self, id: str):\n    self.veiculos[self._procurarVeiculo(id)].calcularValor(self.horaAtual);\n\n  def sair(self, id: str):\n    self.veiculos.pop(self._procurarVeiculo(id));\n  # Fim m\u00e9todos do objeto\n# Fim classe Estancionamento\n",
+            "lines": "63"
+        }
+    ]
+}

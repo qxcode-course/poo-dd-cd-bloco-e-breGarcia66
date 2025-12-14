@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_16-10-32",
+            "content": "@@ -1,383 +0,0 @@\n-from Estacionamento import Estacionamento, Moto, Bike, Carro;%0A%0A# M%C3%A9todo main%0Adef main():%0A  estacionamento: Estacionamento = Estacionamento();%0A  %0A  while True:%0A    line: str = input();%0A    args: list%5Bstr%5D = line.spli(' ');%0A    # print(f'$%7Bline%7D');%0A%0A    match args%5B0%5D:%0A      case 'end':%0A        break;%0A%0A      case _:%0A        print('Erro: comando invalido');%0A%0A# Executando main()%0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-09_16-45-12",
+            "content": "@@ -208,17 +208,16 @@\n ine.spli\n-t\n (' ');%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-10_13-38-09",
+            "content": "@@ -265,130 +265,8 @@\n 0%5D:%0A\n-      case 'show':%0A        print(estacionamento);%0A%0A      case 'tempo':%0A        estacionamento.passarTempo(int(args%5B1%5D));%0A%0A\n     \n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-10_13-39-21",
+            "content": "@@ -387,292 +387,8 @@\n );%0A%0A\n-      case 'estacionar':%0A        match args%5B1%5D:%0A          case 'bike':%0A            estacionamento.estacionar(Bike(args%5B2%5D));%0A%0A          case 'moto':%0A            estacionamento.estacionar(Moto(args%5B2%5D));%0A%0A          case 'carro':%0A            estacionamento.estacionar(Carro(args%5B2%5D));%0A%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-12-10_13-44-24",
+            "content": "@@ -669,111 +669,8 @@\n %5D));\n-%0A      %0A      case 'paga':%0A        estacionamento.pagar(args%5B1%5D);%0A        estacionamento.sair(args%5B1%5D);\n %0A%0A  \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-12-10_13-47-10",
+            "content": "@@ -689,17 +689,16 @@\n se 'paga\n-r\n ':%0A     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-10_13-49-46",
+            "content": "@@ -219,16 +219,18 @@\n  ');%0A   \n+ #\n  print(f\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-10_13-49-54",
+            "content": "from Estacionamento import Estacionamento, Moto, Bike, Carro;\n\n# M\u00e9todo main\ndef main():\n  estacionamento: Estacionamento = Estacionamento();\n  \n  while True:\n    line: str = input();\n    args: list[str] = line.split(' ');\n    print(f'${line}');\n\n    match args[0]:\n      case 'show':\n        print(estacionamento);\n\n      case 'tempo':\n        estacionamento.passarTempo(int(args[1]));\n\n      case 'estacionar':\n        match args[1]:\n          case 'bike':\n            estacionamento.estacionar(Bike(args[2]));\n\n          case 'moto':\n            estacionamento.estacionar(Moto(args[2]));\n\n          case 'carro':\n            estacionamento.estacionar(Carro(args[2]));\n      \n      case 'pagar':\n        estacionamento.pagar(args[1]);\n        estacionamento.sair(args[1]);\n\n      case 'end':\n        break;\n\n      case _:\n        print('Erro: comando invalido');\n\n# Executando main()\nmain()",
+            "lines": "41"
+        }
+    ]
+}

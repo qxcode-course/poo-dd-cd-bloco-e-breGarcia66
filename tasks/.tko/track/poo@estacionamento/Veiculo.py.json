@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-08_16-10-32",
+            "content": "@@ -1,726 +0,0 @@\n-from abc import ABC, abstractmethod;%0Afrom typing import Literal;%0A%0A# Literal para tipo de ve%C3%ADculos v%C3%A1lidos%0AveiculosValidos = Literal%5B'bike', 'carro', 'moto'%5D;%0A#%0A%0A# Criando classe abstrata Veiculo%0Aclass Veiculo(ABC):%0A%0A  # Construtor%0A  def __init__(self,%0A               id: str,%0A               tipo: veiculosValidos,%0A               horaEntrada: int):%0A    self._id: str = id;%0A    self._tipo: str = tipo;%0A    self._horaEntrada = horaEntrada;%0A  # Fim construtor%0A%0A  # M%C3%A9todos de acesso%0A  @property%0A  def id(self) -%3E str:%0A    return self._id;%0A%0A  @property%0A  def tipo(self) -%3E str:%0A    return self._tipo;%0A%0A  @property%0A  def horaEntrada(self) -%3E int:%0A    return self._horaEntrada;%0A  # Fim m%C3%A9todos de acesso%0A# Fim classe abstrata Veiculo\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-08_16-10-39",
+            "content": "@@ -454,102 +454,8 @@\n or%0A%0A\n-  # M%C3%A9todo str%0A  def __str__(self) -%3E str:%0A%0A    return f'%7Bself.id:_%3C10%7D';%0A  # Fim m%C3%A9todo str%0A%0A\n   # \n@@ -723,46 +723,4 @@\n culo\n-%0A%0Av = Veiculo('Ed', 'bike', 0);%0A%0Aprint(v);\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-12-08_16-16-22",
+            "content": "@@ -511,40 +511,8 @@\n n f'\n-%7Bself.tipo.capitalize():_%3E10%7D : \n %7Bsel\n@@ -521,33 +521,12 @@\n id:_\n-%3E\n+%3C\n 10%7D\n- : %7Bself.horaEntrada%7D\n ';%0A \n@@ -750,32 +750,32 @@\n f._horaEntrada;%0A\n+\n   # Fim m%C3%A9todos \n@@ -787,245 +787,8 @@\n esso\n-%0A%0A  # M%C3%A9todos mutantes%0A  @horaEntrada.setter%0A  def horaEntrada(self, hora: int):%0A    self._horaEntrada = hora;%0A  # Fim m%C3%A9todos mutantes%0A%0A  # M%C3%A9todos abstratos%0A  def calcularValor(self, horaSaida: int):%0A    pass;%0A  # Fim m%C3%A9todos abstratos\n %0A# F\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-12-08_16-25-01",
+            "content": "@@ -1,1116 +1,154 @@\n-from abc import ABC, abstractmethod;%0Afrom typing import Literal;%0A%0A# Literal para tipo de ve%C3%ADculos v%C3%A1lidos%0AveiculosValidos = Literal%5B'bike', 'carro', 'moto'%5D;%0A#%0A%0A# Criando classe abstrata Veiculo%0Aclass Veiculo(ABC):%0A%0A  # Construtor%0A  def __init__(self,%0A               id: str,%0A               tipo: veiculosValidos,%0A               horaEntrada\n+@@ -414,21 +414,16 @@%0A aEntrada%0A-\n : int\n-):\n %0A  \n-  self._id: str = id;%0A    self._tipo: str = tipo;%0A    self._horaEntrada: int = horaEntrada;%0A  # Fim construtor%0A%0A  # M%C3%A9todo str%0A  def __str__(self) -%3E str:%0A%0A    return f'%7Bself.tipo.capitalize():_%3E10%7D : %7Bself.id:_%3E10%7D : %7Bself.horaEntrada%7D';%0A  # Fim m%C3%A9todo str%0A%0A  # M%C3%A9todos de acesso%0A  @property%0A  def id(self) -%3E str:%0A    return self._id;%0A%0A  @property%0A  def tipo(self) -%3E str:%0A    return self._tipo;%0A%0A  @property%0A  def horaEntrada(self) -%3E int:%0A    return self._horaEntrada;%0A  # Fim m%C3%A9todos de acesso%0A%0A  # M%C3%A9todos mutantes%0A  @horaEntrada.setter%0A  def horaEntrada(self, hora: int):%0A    self._horaEntrada = hora;%0A  # Fim m%C3%A9todos mutantes%0A%0A  # M%C3%A9todos abstratos%0A  def calcularValor(self, horaSaida: int):%0A    pass;%0A  # Fim m%C3%A9todos abstratos%0A# Fim classe abstrata Veiculo\n+= horaE%0A@@ -1084,28 +1084,69 @@%0A Fim classe abstrata Veiculo%250A%0A+%250Av = Veiculo('Ed', 'bike', 0);%250A%250Aprint(v);\n %0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2025-12-08_23-17-27",
+            "content": "@@ -1109,9 +1109,8 @@\n Veiculo%0A\n-%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-12-09_14-47-05",
+            "content": "from abc import ABC, abstractmethod;\nfrom typing import Literal;\n\n# Literal para tipo de ve\u00edculos v\u00e1lidos\nveiculosValidos = Literal['bike', 'carro', 'moto'];\n#\n\n# Criando classe abstrata Veiculo\nclass Veiculo(ABC):\n\n  # Construtor\n  def __init__(self,\n               id: str,\n               tipo: veiculosValidos,\n               horaEntrada: int):\n    self._id: str = id;\n    self._tipo: str = tipo;\n    self._horaEntrada: int = horaEntrada;\n  # Fim construtor\n\n  # M\u00e9todo str\n  def __str__(self) -> str:\n\n    return f'{self.tipo.capitalize():_>10} : {self.id:_>10} : {self.horaEntrada}';\n  # Fim m\u00e9todo str\n\n  # M\u00e9todos de acesso\n  @property\n  def id(self) -> str:\n    return self._id;\n\n  @property\n  def tipo(self) -> str:\n    return self._tipo;\n\n  @property\n  def horaEntrada(self) -> int:\n    return self._horaEntrada;\n  # Fim m\u00e9todos de acesso\n\n  # M\u00e9todos mutantes\n  @horaEntrada.setter\n  def horaEntrada(self, hora: int):\n    self._horaEntrada = hora;\n  # Fim m\u00e9todos mutantes\n\n  # M\u00e9todos abstratos\n  def calcularValor(self, horaSaida: int):\n    pass;\n  # Fim m\u00e9todos abstratos\n# Fim classe abstrata Veiculo\n\n",
+            "lines": "52"
+        }
+    ]
+}
